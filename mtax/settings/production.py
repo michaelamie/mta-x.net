@@ -20,4 +20,4 @@ DATABASES['default'] =  dj_database_url.config()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Use Amazon S3 bucket for static files
-STATIC_URL = 'http://s3.amazonaws.com/mta-x/'
+STATIC_URL = 'https://s3.amazonaws.com/mta-x/'
