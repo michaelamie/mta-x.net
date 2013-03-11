@@ -1,0 +1,9 @@
+<nav id="next-previous-links">
+  {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">&#171; Newer</a>
+    {% if page_obj.has_next %} | {% endif %}
+  {% endif %}
+  {% if page_obj.has_next %}
+    <a href="?page={{page_obj.next_page_number }}">Older &#187;</a>
+  {% endif %}
+</nav>

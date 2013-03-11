@@ -1,0 +1,19 @@
+<article>
+  <header class="article">
+    <h2>
+      <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a>
+    </h2>
+    <h4>      
+      {% if entry.tags.exists %}
+        Posted: <a href="{{ entry.get_date_url }}">{{ entry.date }}</a>, under:
+        {% for tag in entry.tags.all %}
+          <a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>{% if not forloop.last %},{% endif %}
+        {% endfor %}
+      {% else %}
+        Posted: <a href="{{ entry.get_date_url }}">{{ entry.date }}</a>
+      {% endif %}
+    </h4>
+  </header>
+  {% spaceless %}{{ entry.content|safe }}{% endspaceless %}
+  <div class="article-seperator"></div>
+</article>

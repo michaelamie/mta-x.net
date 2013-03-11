@@ -1,0 +1,7 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  {% for entry in entries %}
+    {% include "blog/entry.html" %}
+  {% endfor %}
+  {% include "blog/navigation.html" %}
+{% endblock content %}

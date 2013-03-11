@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <article>
+    <header class="article">
+      <h2><a href="{{ entry.get_absolute_url }}">About</a></h2>
+    </header>
+    <img class="about" src="{{ STATIC_URL }}img/steel_bridge.jpeg">
+    <p>Why, hello there! I am studying Computer Science at Portland State University, in Oregon.</p>
+    <p>This page began as an interactive form of note-taking, a way for me to consolidate miscellaneous information about the rad projects I’ve been puttering around with.</p>
+    <p>The name “mta-x” is a play on my initials + handle at school, and the meta-x key command in the programming text editor, GNU Emacs.</p>
+    <p>Yeah, it’s not particularly funny. But I needed a name for the site.</p>
+    <div class="article-seperator"></div>
+  </article>
+{% endblock %}

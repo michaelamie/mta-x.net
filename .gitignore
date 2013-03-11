@@ -1,0 +1,4 @@
+*.pyc
+static/
+assets/
+.DS_STORE

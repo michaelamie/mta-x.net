@@ -1,0 +1,6 @@
+<h2>Archive</h2>
+<ul>
+{% for item in archive_list %}
+  <li><a href="/blog/{{ item.date.year }}/{{ item.date|date:"M"|lower }}/">{{ item.date|date:"F Y" }} ({{item.count}})</a></li>
+{% endfor %}
+</ul>

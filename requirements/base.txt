@@ -1,0 +1,7 @@
+Django==1.5
+Markdown==2.2.1
+Unipath==0.2.1
+django-grappelli==2.4.4
+markdown2==2.1.0
+psycopg2==2.4.6
+South==0.7.6
