@@ -15,5 +15,6 @@ urlpatterns = patterns('',
     EntryView.as_view(), name='entry-view'),
   url(r'^tag/(?P<slug>[\w-]+)/$',
     EntryForTagView.as_view(), name='entry-for-tag-view'),
-  url(r'^about/$', AboutView.as_view(), name='about-view'),
+  url(r'^about/$', 
+    AboutView.as_view(), name='about-view'),
 )

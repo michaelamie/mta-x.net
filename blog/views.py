@@ -32,8 +32,8 @@ class EntryDayView(EntryListBase, DayArchiveView):
   pass
   
 class EntryView(BlogView, DateDetailView):
-  date_field='date'
-  queryset=Entry.objects.filter(published=True)
+  date_field = 'date'
+  queryset = Entry.objects.filter(published=True)
   template_name = 'blog/entry_detail.html'
 
 class EntryForTagView(EntryIndexView, SingleObjectMixin):

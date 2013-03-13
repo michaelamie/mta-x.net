@@ -20,7 +20,7 @@ class Tag(models.Model):
     return self.name
 
   class Meta:
-    ordering=['name']
+    ordering = ['name']
     
   def get_absolute_url(self):
     return reverse('entry-for-tag-view', kwargs={'slug': self.slug})
@@ -29,8 +29,10 @@ class Tag(models.Model):
 class Entry(models.Model):
   title = models.CharField(max_length=50)
   slug = models.SlugField(
-    max_length=50, unique_for_date='date',
-    help_text='Generated from title')
+    max_length=50,
+    unique_for_date='date',
+    help_text='Generated from title'
+  )
   date = models.DateField(default=datetime.now)
   tags = models.ManyToManyField(Tag, blank=True)
   published = models.BooleanField(default=True)
