@@ -33,6 +33,6 @@ DEBUG_TOOLBAR_CONFIG = {
   'INTERCEPT_REDIRECTS': False,
   'SHOW_TOOLBAR_CALLBACK': custom_show_toolbar,
   'HIDE_DJANGO_SQL': False,
-  'TAG': 'div',
+  'TAG': 'body',
   'ENABLE_STACKTRACES' : True,
 }
