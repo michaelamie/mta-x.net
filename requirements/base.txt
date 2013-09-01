@@ -1,4 +1,4 @@
-Django==1.5.1
+Django==1.5.2
 Markdown==2.2.1
 Unipath==0.2.1
 django-grappelli==2.4.4
