@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ blog_name }}{{ blog_subtitle }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" />
-    <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/fleuron.png" />
-  </head>
-  <body>
-    <div id="main">
-      <header id="site">
-        <a href="/blog">{{ blog_name }}{{ blog_subtitle }}</a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ blog_name }}{{ blog_subtitle }}</title>
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" />
+  <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/fleuron.png" />
+</head>
+
+<body>
+  <div id="main">
+    <header id="site">
+      <a href="/blog">{{ blog_name }}{{ blog_subtitle }}</a>
+      <nav id="site">
         <ul>
           <li><a href="/blog">Home</a></li>
           <li><a href="#navigation">Navigate</a></li>
           <li><a href="/blog/about">About</a></li>
         </ul>
-      </header>
-      {% block content %}{% endblock content%}
-      {% include "blog/sidebar.html" %}
-      <footer><p>copyright &copy; {% now "Y" %} {{ blog_name }}</p></footer>
-    </div>
-  </body>
+      </nav>
+    </header>
+
+    {% block content %}{% endblock content%}
+
+    {% include "blog/sidebar.html" %}
+    <footer><p>copyright &copy; {% now "Y" %} {{ blog_name }}</p></footer>
+  </div>
+</body>
+
 </html>
